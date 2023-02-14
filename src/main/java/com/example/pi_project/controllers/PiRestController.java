@@ -21,6 +21,11 @@ public class PiRestController {
     public List<Contract> getAllContracts(){
         return piService.getAllContracts();
     }
+    @GetMapping("/getContractById/{id}")
+    @ResponseBody
+    public Contract getContractById(@PathVariable("id")int id){
+        return piService.getContractById(id);
+    }
 
     @GetMapping("/AllDeliveries")
     @ResponseBody

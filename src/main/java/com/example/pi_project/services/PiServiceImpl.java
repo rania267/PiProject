@@ -24,6 +24,11 @@ public class PiServiceImpl implements IPiService{
     public List<Contract> getAllContracts() {
         return contractRepository.findAll();
     }
+    @Override
+    public Contract getContractById(int id) {
+        return contractRepository.findById(id).orElse(null);
+    }
+
 
     @Override
     public Delivery addDelivery(Delivery delivery) {

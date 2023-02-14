@@ -8,6 +8,7 @@ import java.util.List;
 public interface IPiService {
     public List<Delivery> getAllDeliveries();
     public List<Contract> getAllContracts();
+    public Contract getContractById(int id);
     public Delivery addDelivery(Delivery delivery);
     public Contract addContract(Contract contract);
     public void deleteDelivery(int id);

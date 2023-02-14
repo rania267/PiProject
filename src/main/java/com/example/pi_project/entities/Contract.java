@@ -31,6 +31,9 @@ public class Contract implements Serializable {
     private Date startDate;
     @Temporal(TemporalType.DATE)
     private Date endDate;
+    @JsonIgnore
+    @OneToOne(mappedBy = "contract" , cascade = CascadeType.ALL)
+    private  Delivery delivery;
 
 
 }

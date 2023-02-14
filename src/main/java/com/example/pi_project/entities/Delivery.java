@@ -1,5 +1,6 @@
 package com.example.pi_project.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,11 +21,14 @@ public class Delivery implements Serializable {
     private String quantity;
     private float totalHT;
     private String address;
+    private String providerName;
     private float unitPrice;
     private Long numOrder;
     @Temporal(TemporalType.DATE)
     private Date deliveryDate;
     @Enumerated(EnumType.STRING)
     private State deliveryState;
+    @OneToOne
+    private  Contract contract;
 
 }
